@@ -1,25 +1,44 @@
 ﻿using System;
 
-namespace Opdracht_1
+namespace Opdracht_5
 {
-	class Program
-	{
-		static void Main(string[] args)
-		{
-			string naam;
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random rnd = new Random();
 
-			Console.WriteLine("Geef uw naam: ");
+            int getal1 = rnd.Next(101, 10000);
+            int getal2 = rnd.Next(101, 10000);
+            int getal3 = rnd.Next(101, 10000);
+            int getal4 = rnd.Next(101, 10000);
 
-			naam = Console.ReadLine();
+            Console.WriteLine(getal1);
+            Console.WriteLine(getal2);
+            Console.WriteLine(getal3);
+            Console.WriteLine(getal4);
 
-			Console.WriteLine("Geef uw leeftijd: ");
+            Console.WriteLine("Tel deze getallen bij elkaar op");
+            Console.Write("Geef uw antwoord: "); 
+            string invoer = Console.ReadLine();
 
-			string leeftijd = Console.ReadLine();
+            int gegevenantwoord = int.Parse(invoer);
 
-			Console.WriteLine("Uw naam is " + naam);
-			Console.WriteLine("Uw leeftijd is " + leeftijd);
+            int antwoord = getal1 + getal2 + getal3 + getal4;
 
-			Console.ReadLine(); 
-		}
-	}
+            if (gegevenantwoord == antwoord)
+            {
+                Console.WriteLine("Yaaaaay");
+
+            }
+
+            else 
+            {
+                Console.WriteLine("jammer");
+
+            }
+
+            Console.ReadKey(); 
+        }
+    }
 }
